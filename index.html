@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Beauty | Premium Cosmetics Boutique & Showroom</title>
+    <meta name="description" content="Welcome to Concept Beauty, India's luxury offline cosmetics experience. Book shade-matching trials, consult aesthetic advisors, and reserve Indian brand products to try on-site.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> +91 22 1234 5678</span>
+                <span><i class="fas fa-envelope"></i> contact@conceptbeautyindia.com</span>
+                <span><i class="fas fa-map-marker-alt"></i> Baranagar, Kolkata, West Bengal</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <span style="color:#444;">|</span>
+                <select id="lang-select">
+                    <option>English</option>
+                    <option>Hindi</option>
+                </select>
+                <select id="currency-select">
+                    <option>INR (₹)</option>
+                    <option>USD ($)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Concept<span>Beauty</span></div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Our Products</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HOME SECTION (HERO SLIDER) -->
+    <section id="home" class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('assets/images/hero_makeup.png');">
+            <div class="slide-overlay"></div>
+            <div class="container" style="height: 100%;">
+                <div class="slide-content">
+                    <span class="slide-subtitle">India's Luxury Cosmetics Boutique</span>
+                    <h1 class="slide-title">LIGHT SPRING MAKEUP / COSMETICS</h1>
+                    <p class="slide-desc">Visit our showroom in Baranagar, Kolkata, West Bengal to try leading cosmetic brands matched uniquely to your skin tone by professional artists.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('assets/images/about_consultation.png');">
+            <div class="slide-overlay"></div>
+            <div class="container" style="height: 100%;">
+                <div class="slide-content">
+                    <span class="slide-subtitle">Personalized Advisory</span>
+                    <h1 class="slide-title">SKIN DIAGNOSTICS & AYURVEDIC CARE</h1>
+                    <p class="slide-desc">Meet with our aesthetic technicians for in-depth skin assessments and custom product matching from premium Indian luxury skincare houses.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+        </div>
+    </section>
+
+    <!-- CORE FEATURES SECTION -->
+    <section class="container" style="margin-bottom: 60px;">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                <h3>Boutique Try-On Counters</h3>
+                <p>Sample foundations, matte lipsticks, and cheek tints under customized color-accurate daylight simulation lamps.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+                <h3>Personal Aesthetic advisors</h3>
+                <p>Dedicated makeup artists and skin professionals guide you through textures, undertones, and routines.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3>100% Authentic Indian Brands</h3>
+                <p>Direct supply contracts with Lakmé, Forest Essentials, Kama Ayurveda, Sugar, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOP SECTION (PRODUCT CATALOG SHOWCASE) -->
+    <section id="shop" class="section-padding" style="background-color: #FAF8F5; border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Showroom Inventory</span>
+                <h2 class="section-title">OUR INDIAN BRANDS CATALOG</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">Search products and reserve them to inspect in-store. Prices display in Indian Rupees (₹).</p>
+            </div>
+
+            <!-- Shop Toolbar / Search -->
+            <div class="shop-toolbar" style="margin-bottom: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+                <div class="search-widget" style="width: 100%; max-width: 400px;">
+                    <input type="text" id="shop-search" placeholder="Search Indian brands (e.g. Lakme, Forest Essentials)...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-tabs" style="margin-bottom: 0; justify-content: flex-end;">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="makeup">Makeup</button>
+                    <button class="filter-tab" data-filter="skincare">Skincare</button>
+                    <button class="filter-tab" data-filter="brushes">Brushes</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product 1: Lakme Lipstick -->
+                <div class="product-card" data-category="makeup" data-id="ind-prod-1">
+                    <div class="product-badge new">LAKMÉ</div>
+                    <div class="product-image-container">
+                        <img src="assets/images/product_lipstick.png" alt="Lakme Absolute Matte Liquid Lipstick">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">LAKMÉ ABSOLUTE</div>
+                            <h3 class="product-title">Matte Melt Liquid Lipstick</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹850</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 1A)</div>
+                            <button onclick="checkStoreAvailability('Lakmé Absolute Matte Melt Liquid Lipstick')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Maybelline Foundation -->
+                <div class="product-card" data-category="makeup" data-id="ind-prod-2">
+                    <div class="product-badge sale">MAYBELLINE</div>
+                    <div class="product-image-container">
+                        <img src="assets/images/product_compact.png" alt="Maybelline Fit Me Matte Foundation">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">MAYBELLINE NEW YORK</div>
+                            <h3 class="product-title">Fit Me Matte + Poreless Foundation</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹649</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 2B)</div>
+                            <button onclick="checkStoreAvailability('Maybelline Fit Me Matte Foundation')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Sugar Bronzer -->
+                <div class="product-card" data-category="makeup" data-id="ind-prod-3">
+                    <div class="product-badge sale">SUGAR</div>
+                    <div class="product-image-container">
+                        <img src="assets/images/product_compact.png" alt="Sugar Cosmetics Contour De Force Bronzer">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">SUGAR COSMETICS</div>
+                            <h3 class="product-title">Contour De Force Mini Bronzer</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹499</div>
+                            <div class="stock-status low"><i class="fas fa-exclamation-triangle"></i> Low Stock (Aisle 2A)</div>
+                            <button onclick="checkStoreAvailability('Sugar Contour De Force Mini Bronzer')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Forest Essentials Serum -->
+                <div class="product-card" data-category="skincare" data-id="ind-prod-4">
+                    <div class="product-badge new">FOREST ESSENTIALS</div>
+                    <div class="product-image-container">
+                        <img src="assets/images/product_serum.png" alt="Forest Essentials Soundarya Radiance Serum">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">FOREST ESSENTIALS</div>
+                            <h3 class="product-title">Soundarya Radiance Serum</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹4,950</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3A)</div>
+                            <button onclick="checkStoreAvailability('Forest Essentials Soundarya Radiance Serum')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Kama Ayurveda Fluid -->
+                <div class="product-card" data-category="skincare" data-id="ind-prod-5">
+                    <div class="product-badge new">KAMA AYURVEDA</div>
+                    <div class="product-image-container">
+                        <img src="assets/images/product_serum.png" alt="Kama Ayurveda Kumkumadi Fluid">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">KAMA AYURVEDA</div>
+                            <h3 class="product-title">Kumkumadi Beauty Fluid</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹2,995</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3B)</div>
+                            <button onclick="checkStoreAvailability('Kama Ayurveda Kumkumadi Beauty Fluid')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Biotique Serum -->
+                <div class="product-card" data-category="skincare" data-id="ind-prod-6">
+                    <div class="product-image-container">
+                        <img src="assets/images/product_serum.png" alt="Biotique Bio Dandelion Lightening Serum">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">BIOTIQUE</div>
+                            <h3 class="product-title">Bio Dandelion Lightening Serum</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹349</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3C)</div>
+                            <button onclick="checkStoreAvailability('Biotique Bio Dandelion Lightening Serum')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7: Plum Face Wash -->
+                <div class="product-card" data-category="skincare" data-id="ind-prod-7">
+                    <div class="product-badge sale">PLUM</div>
+                    <div class="product-image-container">
+                        <img src="assets/images/product_serum.png" alt="Plum Green Tea Pore Face Wash">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">PLUM GOODNESS</div>
+                            <h3 class="product-title">Green Tea Pore Face Wash</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹329</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3A)</div>
+                            <button onclick="checkStoreAvailability('Plum Green Tea Pore Face Wash')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8: Lakme Brush -->
+                <div class="product-card" data-category="brushes" data-id="ind-prod-8">
+                    <div class="product-image-container">
+                        <img src="assets/images/product_brush.png" alt="Lakme Absolute Powder Brush">
+                        <div class="product-actions-overlay">
+                            <button class="action-btn reserve-btn"><i class="fas fa-bookmark"></i> Reserve to Try</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-category">LAKMÉ</div>
+                            <h3 class="product-title">Absolute Face & Powder Brush</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price">₹999</div>
+                            <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 4A)</div>
+                            <button onclick="checkStoreAvailability('Lakmé Absolute Face & Powder Brush')" style="margin-top: 10px; width: 100%; border:1px solid #1a1a1a; padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCOUNT & STORE STORY SECTION -->
+    <section class="promo-section section-padding">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <span class="promo-subtitle">In-store Exclusive (India)</span>
+                    <h2 class="promo-title">GET 10% DISCOUNT ON YOUR SHOWROOM BILL</h2>
+                    <p>Enter your email below to get an instant digital barcode invitation. Show it at our showroom billing counters in Baranagar, Kolkata to claim 10% off your purchase.</p>
+                    <form class="promo-form" id="promo-discount-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn-luxury">Get Barcode</button>
+                    </form>
+                    <div class="promo-success" id="promo-success-msg"></div>
+                </div>
+                
+                <div class="promo-card">
+                    <span class="promo-subtitle">The Sensory Experience</span>
+                    <h2 class="promo-title">TRIAL AND EXPLORE BEAUTY PHYSICALLY</h2>
+                    <p>We believe online shopping cannot replace physical experience. Touch the textures, evaluate the true pigments in changing day light, and enjoy personalized routines mapped out by certified cosmetics advisers.</p>
+                    <div>
+                        <a href="#about" class="btn-luxury-outline">Learn About Boutique</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="section-padding" style="background-color: var(--surface-light);">
+        <div class="container">
+            <!-- Company profile -->
+            <div class="about-company-grid" style="margin-bottom: 80px;">
+                <div class="about-img-box">
+                    <img src="assets/images/about_consultation.png" alt="Skincare consultation counter">
+                </div>
+                <div>
+                    <span class="promo-subtitle">Sensory Beauty Boutique</span>
+                    <h2 class="company-title">Our Physical Showrooms</h2>
+                    <p class="company-desc">
+                        Every cosmetic product at Concept Beauty is arranged for hands-on sensory trials. We host bespoke makeup counters, shade-matching diagnostic panels, and Ayurvedic consultants who will help you find the absolute perfect shade of Lakmé, Sugar, or Kama Ayurveda for your skin.
+                    </p>
+                    <p class="company-desc">
+                        Our physical showrooms are spaces of calmness, safety, and certified guidance. We sanitize all samples before trials and supply fresh batches directly from brand houses.
+                    </p>
+                    <div class="company-bullets">
+                        <div class="company-bullet"><i class="fas fa-check"></i> Strict Sanitization</div>
+                        <div class="company-bullet"><i class="fas fa-check"></i> Daylight Light Bars</div>
+                        <div class="company-bullet"><i class="fas fa-check"></i> Ayurvedic Experts</div>
+                        <div class="company-bullet"><i class="fas fa-check"></i> Fresh Product Batches</div>
+                    </div>
+                    <a href="#contact" class="btn-luxury book-apt-btn">Schedule Free Skin Consult</a>
+                </div>
+            </div>
+
+            <!-- Specialist Team -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 60px; margin-bottom: 60px;">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Beauty Advisory Team</span>
+                    <h2 class="section-title">OUR EXCLUSIVE ADVISORS</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">Meet our in-store certified makeup artists and skincare consultants waiting to help you.</p>
+                </div>
+
+                <div class="team-grid">
+                    <!-- Member 1 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/images/team_specialist_1.png" alt="Emma Watson">
+                            <div class="team-socials-overlay">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Emma Watson</h3>
+                            <div class="team-role">Senior Makeup Artist</div>
+                        </div>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/images/team_specialist_2.png" alt="Dr. Julian Stark">
+                            <div class="team-socials-overlay">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Dr. Julian Stark</h3>
+                            <div class="team-role">Aesthetic Dermatologist</div>
+                        </div>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="assets/images/team_specialist_3.png" alt="Clara Vance">
+                            <div class="team-socials-overlay">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Clara Vance</h3>
+                            <div class="team-role">Showroom Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials Carousel -->
+            <div class="testimonials-section section-padding" style="border-radius: 8px;">
+                <div class="testimonial-carousel" id="testimonial-carousel">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <img src="assets/images/team_specialist_1.png" alt="Client Avatar" class="testimonial-avatar">
+                        <p class="testimonial-quote">
+                            "The daylight-simulation counters in Baranagar are mindblowing. I got matched with Lakmé foundation, and it looked exactly as natural outside in direct sun as it did inside! Highly recommend booking a matching session."
+                        </p>
+                        <div class="testimonial-author">Pooja Sharma (Kolkata)</div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <img src="assets/images/team_specialist_3.png" alt="Client Avatar" class="testimonial-avatar">
+                        <p class="testimonial-quote">
+                            "I love reserving Forest Essentials serums to try at their Kolkata Baranagar experience lounge. I can test the fragrance and thickness on my skin before spending. Excellent customer support!"
+                        </p>
+                        <div class="testimonial-author">Anjali Nair (Kolkata)</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="section-padding" style="background-color: #FAF6F0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Store Locator</span>
+                <h2 class="section-title">CONTACT OUR BOUTIQUE</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">Book a visit to our flagship Baranagar boutique or get in touch for details.</p>
+            </div>
+
+            <!-- Simulated Map -->
+            <div class="map-container" style="margin-bottom: 50px;">
+                <div class="simulated-map">
+                    <div class="map-grid-roads">
+                        <div class="map-road-h"></div>
+                        <div class="map-road-v"></div>
+                        <div class="map-park"></div>
+                    </div>
+                    
+                    <div class="map-pin"></div>
+                    
+                    <div class="map-card-popup">
+                        <h4><i class="fas fa-store"></i> Concept Beauty Boutique</h4>
+                        <p>Taj Palace Rd, Apollo Bandar, Baranagar, Kolkata, West Bengal</p>
+                        <p style="font-size:0.75rem; color:#888;"><i class="far fa-clock"></i> Today: 10:00 AM - 9:00 PM</p>
+                        <a href="#contact" class="btn-luxury book-apt-btn" style="display:inline-block; padding: 6px 12px; font-size:0.7rem; width:100%; text-align:center;">Schedule Visit & Consultation</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Info block -->
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info-list">
+                        <li>
+                            <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-detail-text">
+                                <h4>Boutique Location</h4>
+                                <p>BT Road, Baranagar,<br>Kolkata, West Bengal 700036, India</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-box"><i class="fas fa-phone"></i></div>
+                            <div class="contact-detail-text">
+                                <h4>Hotline Numbers</h4>
+                                <p>+91 22 1234 5678<br>+91 22 8765 4321</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-detail-text">
+                                <h4>Official Emails</h4>
+                                <p>info@conceptbeautyindia.com<br>support@conceptbeautyindia.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Form block -->
+                <div class="contact-form-card">
+                    <h3>Drop us a line</h3>
+                    <form id="contact-us-form">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="c-first-name">First Name*</label>
+                                <input type="text" id="c-first-name" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-last-name">Last Name*</label>
+                                <input type="text" id="c-last-name" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="c-email">Email Address*</label>
+                                <input type="email" id="c-email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-subject">Subject</label>
+                                <input type="text" id="c-subject" placeholder="Experience type, shade trial...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-message">Your Message*</label>
+                            <textarea id="c-message" rows="5" placeholder="Tell us how we can assist you..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-luxury">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS PARTNERS SECTION -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-flex">
+                <span class="partner-logo">graphicriver</span>
+                <span class="partner-logo">audiojungle</span>
+                <span class="partner-logo">3docean</span>
+                <span class="partner-logo">codecanyon</span>
+                <span class="partner-logo">themeforest</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM COSMETICS COLLAGE -->
+    <section class="collage-grid">
+        <div class="collage-item">
+            <img src="assets/images/hero_makeup.png" alt="Cosmetic grid">
+            <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="collage-item">
+            <img src="assets/images/about_consultation.png" alt="Client skin consult">
+            <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="collage-item">
+            <img src="assets/images/product_serum.png" alt="Champagne gold serums">
+            <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="collage-item">
+            <img src="assets/images/team_specialist_1.png" alt="In-store boutique beauty">
+            <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Concept Beauty</h3>
+                    <p>We are a premium offline cosmetic destination committed to the physical trial and discovery of beauty. Visit our showrooms for custom shade matching and dermatological consultations.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Showroom Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact" class="book-apt-btn">Makeup Shade Matching</a></li>
+                        <li><a href="#contact" class="book-apt-btn">Skincare Diagnostics</a></li>
+                        <li><a href="#contact" class="book-apt-btn">Private Bridal Makeup</a></li>
+                        <li><a href="#contact" class="book-apt-btn">Cosmetics Gift Wrapping</a></li>
+                        <li><a href="#contact">In-store Classes & Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Customer Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Company</a></li>
+                        <li><a href="#contact">Showroom Locations</a></li>
+                        <li><a href="#shop">Browse Store Stock</a></li>
+                        <li><a href="#contact">Support Hotline</a></li>
+                        <li><a href="#about">Store Safety Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Taj Palace Rd, Apollo Bandar, Baranagar, Kolkata, West Bengal</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>+91 22 1234 5678<br>+91 22 8765 4321</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>info@conceptbeautyindia.com<br>support@conceptbeautyindia.com</div>
+                        </li>
+                    </ul>
+                    <div class="footer-payments">
+                        <i class="fab fa-cc-visa" style="font-size: 1.8rem; color:#fff;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 1.8rem; color:#fff;"></i>
+                        <i class="fab fa-cc-amex" style="font-size: 1.8rem; color:#fff;"></i>
+                        <i class="fab fa-cc-apple-pay" style="font-size: 1.8rem; color:#fff;"></i>
+                        <i class="fab fa-google-pay" style="font-size: 1.8rem; color:#fff;"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>&copy; 2026 Concept Beauty Cosmetics Store. All Rights Reserved.</div>
+                <div class="footer-bottom-logo">Concept<span>Beauty</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- IN-STORE RESERVATION CART DRAWER -->
+    <div class="reservation-drawer" id="reservation-drawer">
+        <div class="drawer-header">
+            <h3>Reserve to Try</h3>
+            <button class="drawer-close" id="drawer-close">&times;</button>
+        </div>
+        <div class="reservation-list" id="drawer-list">
+            <!-- Populated dynamically via main.js -->
+        </div>
+        <div class="drawer-footer">
+            <div class="total-box">
+                <span>Selected Items:</span>
+                <span id="drawer-total-items">0 items</span>
+            </div>
+            <p style="font-size: 0.75rem; color: #666; margin-bottom: 15px; line-height: 1.4;">
+                <i class="fas fa-info-circle"></i> These items will be held at our beauty counter for 48 hours for you to try on-site. No upfront payment required!
+            </p>
+            <a href="#contact" class="btn-luxury book-apt-btn" style="display: block; text-align: center;">Book Visit to Try</a>
+        </div>
+    </div>
+
+    <!-- BOOKING APPOINTMENT MODAL -->
+    <div class="modal-backdrop" id="booking-modal">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3>Book Showroom Session</h3>
+                <button class="modal-close" id="booking-modal-close">&times;</button>
+            </div>
+            
+            <!-- Booking Form -->
+            <div class="modal-body" id="booking-form-content">
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="apt-service">Select Experience</label>
+                        <select id="apt-service" required>
+                            <option value="Custom Shade Matching (Free)">Custom Shade Matching & Foundation Trial (Free, 15m)</option>
+                            <option value="Skincare Consultation (Free)">Skincare Analysis & Diagnostic Routine (Free, 20m)</option>
+                            <option value="Full Glam Makeup Application (₹2,500)">Full Face Glam Makeup Application (₹2,500, 45m)</option>
+                            <option value="Bridal Color Consultation (₹4,000)">Bridal & Special Occasion Trial (₹4,000, 60m)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="apt-name">Full Name</label>
+                            <input type="text" id="apt-name" placeholder="Priyanka Sen" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apt-email">Email Address</label>
+                            <input type="email" id="apt-email" placeholder="priyanka@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apt-date">Choose Date</label>
+                        <input type="date" id="apt-date" required min="2026-05-20">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Time Slot</label>
+                        <div class="time-slot-grid">
+                            <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+                            <div class="time-slot" data-time="11:30 AM">11:30 AM</div>
+                            <div class="time-slot" data-time="01:00 PM">01:00 PM</div>
+                            <div class="time-slot" data-time="02:30 PM">02:30 PM</div>
+                            <div class="time-slot" data-time="04:00 PM">04:00 PM</div>
+                            <div class="time-slot" data-time="05:30 PM">05:30 PM</div>
+                            <div class="time-slot" data-time="07:00 PM">07:00 PM</div>
+                            <div class="time-slot" data-time="08:00 PM">08:00 PM</div>
+                        </div>
+                        <input type="hidden" id="selected-time" required>
+                    </div>
+
+                    <div style="margin-top: 25px;">
+                        <button type="submit" class="btn-luxury" style="width: 100%;">Confirm Showroom Booking</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Booking Success -->
+            <div class="modal-body" id="booking-success-content" style="display: none;">
+                <div class="booking-success-screen">
+                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="booking-success-title">Booking Confirmed!</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">
+                        Your session for <strong id="success-service">Service</strong> has been booked for <strong id="success-date">Date</strong> at <strong id="success-time">Time</strong>.
+                    </p>
+                    <div class="booking-code" id="success-ref">TF-000000</div>
+                    <p style="font-size: 0.8rem; color: #888; max-width: 400px;">
+                        Please save this booking code. Show it to our beauty concierge desk when you arrive at our Baranagar showroom. See you soon!
+                    </p>
+                    <button class="btn-luxury" style="margin-top: 25px; width: 100%;" onclick="window.location.reload();">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
