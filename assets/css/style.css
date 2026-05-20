@@ -5,20 +5,20 @@ html {
 }
 
 :root {
-    --primary: #c29c78; /* Champagne gold */
-    --primary-dark: #a98059;
-    --primary-light: #e4d5c6;
-    --secondary: #1a1a1a; /* Charcoal / Deep luxury black */
-    --secondary-light: #2b2b2b;
-    --bg-light: #FAF8F5; /* Premium soft ivory / cream */
+    --primary: #026A83; /* Premium Teal */
+    --primary-dark: #014f63;
+    --primary-light: #e6f3f6;
+    --secondary: #D8172A; /* Vibrant Red */
+    --secondary-light: #f52c3f;
+    --bg-light: #f7fbfc; /* Matching light teal-ish background */
     --surface-light: #ffffff;
-    --text-dark: #222222;
-    --text-muted: #666666;
+    --text-dark: #1a2c30; /* Soft dark teal-gray text */
+    --text-muted: #536b70;
     --text-light: #ffffff;
-    --border-color: #e2d9cf;
-    --gold-glow: 0 0 20px rgba(194, 156, 120, 0.2);
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --border-color: #d2e4e8;
+    --gold-glow: 0 0 20px rgba(2, 106, 131, 0.25);
+    --shadow-soft: 0 10px 30px rgba(2, 106, 131, 0.06);
+    --shadow-dark: 0 15px 40px rgba(2, 106, 131, 0.12);
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-fast: all 0.2s ease;
 }
