@@ -515,7 +515,7 @@ function initPromoCode() {
    ========================================================================== */
 window.checkStoreAvailability = function(productName) {
     const stores = [
-        { name: "Kolkata Baranagar Showroom (BT Road)", stock: "In Stock (Aisle 2A)" },
+        { name: "Kolkata Baranagar Showroom (BK Moitra Rd)", stock: "In Stock (Aisle 2A)" },
         { name: "Kolkata Salt Lake Boutique", stock: "In Stock (Aisle 3C)" },
         { name: "Kolkata Gariahat Experience Lounge", stock: "Low Stock (2 items left)" }
     ];
