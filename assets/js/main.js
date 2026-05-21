@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initReservations();
     initBookings();
     initTestimonials();
+    initBrandCarousel();
     initContactForm();
     initPromoCode();
 });
@@ -455,7 +456,81 @@ function initTestimonials() {
 }
 
 /* ==========================================================================
-   8. Drop Us a Line Form Submission Handler (Contact Section)
+   8. Brand Logo Carousel
+   ========================================================================== */
+function initBrandCarousel() {
+    const viewport = document.getElementById('brand-carousel');
+    if (!viewport) return;
+
+    const track = viewport.querySelector('.brands-carousel-track');
+    const group = viewport.querySelector('.brands-logo-group');
+    if (!track || !group) return;
+
+    const clone = group.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+
+    viewport.querySelectorAll('.brand-logo-card img').forEach(img => {
+        img.addEventListener('error', () => {
+            const card = img.closest('.brand-logo-card');
+            if (card) {
+                card.classList.add('logo-missing');
+            }
+        }, { once: true });
+    });
+
+    let isPaused = false;
+    let carouselTimer;
+
+    function getLoopWidth() {
+        return group.scrollWidth + 16;
+    }
+
+    function stepCarousel() {
+        if (isPaused) return;
+
+        viewport.scrollLeft += 1;
+        if (viewport.scrollLeft >= getLoopWidth()) {
+            viewport.scrollLeft = 0;
+        }
+    }
+
+    function restartCarousel() {
+        clearInterval(carouselTimer);
+        carouselTimer = setInterval(stepCarousel, 24);
+    }
+
+    function moveCarousel(direction) {
+        isPaused = true;
+        viewport.scrollBy({
+            left: direction * 360,
+            behavior: 'smooth'
+        });
+
+        window.setTimeout(() => {
+            if (!viewport.matches(':hover') && document.activeElement !== viewport) {
+                isPaused = false;
+            }
+        }, 1200);
+    }
+
+    document.querySelectorAll('[data-brand-carousel]').forEach(button => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.brandCarousel === 'prev' ? -1 : 1;
+            moveCarousel(direction);
+        });
+    });
+
+    viewport.addEventListener('mouseenter', () => { isPaused = true; });
+    viewport.addEventListener('mouseleave', () => { isPaused = false; });
+    viewport.addEventListener('focusin', () => { isPaused = true; });
+    viewport.addEventListener('focusout', () => { isPaused = false; });
+
+    restartCarousel();
+}
+
+/* ==========================================================================
+   9. Drop Us a Line Form Submission Handler (Contact Section)
    ========================================================================== */
 function initContactForm() {
     const contactForm = document.getElementById('contact-us-form');
