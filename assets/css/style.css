@@ -926,8 +926,8 @@ header {
 
 /* --- Footer --- */
 footer {
-    background-color: var(--secondary);
-    color: #bbbbbb;
+    background-color: #5C0D15; /* Elegant Deep Burgundy Red */
+    color: #dfd5d6;
     padding: 70px 0 30px 0;
     font-size: 0.9rem;
 }
