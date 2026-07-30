@@ -43,38 +43,6 @@ function initNavigation() {
 
                 const targetId = link.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = targetSection.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    }
-
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.padding = '5px 0';
-        } else {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
-            header.style.padding = '0';
-        }
-    });
-}
-
-/* ==========================================================================
-   2. ScrollSpy (Highlighter for Single-Page Sections)
-   ========================================================================== */
-function initScrollSpy() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const headerHeight = document.querySelector('header').offsetHeight;
 
     window.addEventListener('scroll', () => {
         let currentSectionId = '';
@@ -205,7 +173,7 @@ function initFilterTabs() {
 /* ==========================================================================
    5. In-Store Product Reservation Cart (Local Storage based)
    ========================================================================== */
-const RESERVATION_KEY = 'conceptbeauty_store_reservations';
+const RESERVATION_KEY = 'glamandglow_store_reservations';
 
 function getReservations() {
     return JSON.parse(localStorage.getItem(RESERVATION_KEY)) || [];
@@ -308,7 +276,7 @@ function initReservations() {
 
         const id = card.getAttribute('data-id') || 'prod-' + Date.now();
         const title = card.querySelector('.product-title').textContent.trim();
-        const price = card.querySelector('.product-price').textContent.replace('Check Boutique Live Stock', '').trim();
+        const price = card.querySelector('.product-price').textContent.replace('Check Store Live Stock', '').trim();
         const image = card.querySelector('.product-image-container img').getAttribute('src');
 
         const list = getReservations();
@@ -392,9 +360,9 @@ function initBookings() {
             const bookingRef = 'TF-' + Math.floor(100000 + Math.random() * 900000);
             const bookingDetails = { bookingRef, name, email, service, date, time };
 
-            const allBookings = JSON.parse(localStorage.getItem('conceptbeauty_store_bookings')) || [];
+            const allBookings = JSON.parse(localStorage.getItem('glamandglow_store_bookings')) || [];
             allBookings.push(bookingDetails);
-            localStorage.setItem('conceptbeauty_store_bookings', JSON.stringify(allBookings));
+            localStorage.setItem('glamandglow_store_bookings', JSON.stringify(allBookings));
 
             document.getElementById('success-service').textContent = service;
             document.getElementById('success-date').textContent = date;
@@ -549,7 +517,7 @@ function initContactForm() {
                     <div class="success-icon"><i class="fas fa-check-circle"></i></div>
                     <h3 class="booking-success-title">Message Received!</h3>
                     <p style="color: #666; font-size: 0.95rem; line-height: 1.6; max-width: 420px; margin: 0 auto 20px auto;">
-                        Thank you for reaching out to Concept Beauty Indian Boutique. One of our store beauty advisors will review your inquiry and email you back within 24 hours.
+                        Thank you for reaching out to Glam & Glow Store. One of our store beauty advisors will review your inquiry and email you back within 24 hours.
                     </p>
                     <button class="btn-luxury" onclick="window.location.reload();">Send Another Message</button>
                 </div>
@@ -591,11 +559,11 @@ function initPromoCode() {
 window.checkStoreAvailability = function(productName) {
     const stores = [
         { name: "Kolkata Baranagar Showroom (BK Moitra Rd)", stock: "In Stock (Aisle 2A)" },
-        { name: "Kolkata Salt Lake Boutique", stock: "In Stock (Aisle 3C)" },
+        { name: "Kolkata Salt Lake Store", stock: "In Stock (Aisle 3C)" },
         { name: "Kolkata Gariahat Experience Lounge", stock: "Low Stock (2 items left)" }
     ];
 
-    let message = `Boutique Availability for "${productName}":\n\n`;
+    let message = `Store Availability for "${productName}":\n\n`;
     stores.forEach(store => {
         message += `• ${store.name}: ${store.stock}\n`;
     });
@@ -603,3 +571,7 @@ window.checkStoreAvailability = function(productName) {
     
     alert(message);
 };
+
+
+
+

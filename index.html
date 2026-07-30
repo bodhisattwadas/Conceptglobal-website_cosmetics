@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concept Beauty | Premium Cosmetics Boutique & Showroom</title>
-    <meta name="description" content="Welcome to Concept Beauty, India's luxury offline cosmetics experience. Book shade-matching trials, consult aesthetic advisors, and reserve Indian brand products to try on-site.">
+    <title>Glam & Glow | Premium Cosmetics Store & Showroom</title>
+    <meta name="description" content="Welcome to Glam & Glow, India's luxury offline cosmetics experience. Book shade-matching trials, consult aesthetic advisors, and reserve Indian brand products to try on-site.">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="top-bar-left">
                 <span><i class="fas fa-phone"></i> +91 7003850742</span>
-                <span><i class="fas fa-envelope"></i> contact@conceptbeautyindia.com</span>
+                <span><i class="fas fa-envelope"></i> contact@glamandglow.com</span>
                 <a href="https://maps.app.goo.gl/oFHSH9wUEdBh7J986" target="_blank" rel="noopener noreferrer" style="color: inherit;">
                     <span><i class="fas fa-map-marker-alt"></i> Baranagar, Kolkata, West Bengal</span>
                 </a>
@@ -37,7 +37,7 @@
     <!-- MAIN HEADER -->
     <header>
         <div class="container header-container">
-            <div class="logo">Concept<span>Beauty</span></div>
+            <div class="logo">Glam<span> & Glow</span></div>
             
             <nav class="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
@@ -53,33 +53,22 @@
     </header>
 
     <!-- HOME SECTION (HERO SLIDER) -->
-    <section id="home" class="hero-slider">
+    <section id="home" class="hero-slider" style="height: auto; min-height: 80vh;">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('assets/images/hero_makeup.png');">
-            <div class="slide-overlay"></div>
-            <div class="container" style="height: 100%;">
-                <div class="slide-content">
-                    <span class="slide-subtitle">India's Luxury Cosmetics Boutique</span>
-                    <h1 class="slide-title">LIGHT SPRING MAKEUP / COSMETICS</h1>
-                    <p class="slide-desc">Visit our showroom in Baranagar, Kolkata, West Bengal to try leading cosmetic brands matched uniquely to your skin tone by professional artists.</p>
-                </div>
-            </div>
+        <div class="slide active" style="background-image: url('assets/images/glam_glow_banner.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         </div>
         
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('assets/images/about_consultation.png');">
-            <div class="slide-overlay"></div>
-            <div class="container" style="height: 100%;">
-                <div class="slide-content">
-                    <span class="slide-subtitle">Personalized Advisory</span>
-                    <h1 class="slide-title">SKIN DIAGNOSTICS & AYURVEDIC CARE</h1>
-                    <p class="slide-desc">Meet with our aesthetic technicians for in-depth skin assessments and custom product matching from premium Indian luxury skincare houses.</p>
-                </div>
-            </div>
+        <div class="slide" style="background-image: url('assets/images/glam_glow_banner_2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('assets/images/glam_glow_banner_3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         </div>
 
         <div class="slider-controls">
             <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
             <div class="slider-dot"></div>
         </div>
     </section>
@@ -89,7 +78,7 @@
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-magic"></i></div>
-                <h3>Boutique Try-On Counters</h3>
+                <h3>Store Try-On Counters</h3>
                 <p>Sample foundations, matte lipsticks, and cheek tints under customized color-accurate daylight simulation lamps.</p>
             </div>
             <div class="feature-card">
@@ -106,7 +95,7 @@
     </section>
 
     <!-- BRAND LOGO CAROUSEL -->
-    <section class="brands-carousel-section" aria-label="Beauty brands available at Concept Beauty">
+    <section class="brands-carousel-section" aria-label="Beauty brands available at Glam & Glow">
         <div class="brands-carousel-viewport" id="brand-carousel">
             <div class="brands-carousel-track">
                 <div class="brands-logo-group">
@@ -194,7 +183,7 @@
                         <div>
                             <div class="product-price">₹850</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 1A)</div>
-                            <button onclick="checkStoreAvailability('Lakmé Absolute Matte Melt Liquid Lipstick')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Lakmé Absolute Matte Melt Liquid Lipstick')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -223,7 +212,7 @@
                         <div>
                             <div class="product-price">₹649</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 2B)</div>
-                            <button onclick="checkStoreAvailability('Maybelline Fit Me Matte Foundation')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Maybelline Fit Me Matte Foundation')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -252,7 +241,7 @@
                         <div>
                             <div class="product-price">₹499</div>
                             <div class="stock-status low"><i class="fas fa-exclamation-triangle"></i> Low Stock (Aisle 2A)</div>
-                            <button onclick="checkStoreAvailability('Sugar Contour De Force Mini Bronzer')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Sugar Contour De Force Mini Bronzer')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -281,7 +270,7 @@
                         <div>
                             <div class="product-price">₹4,950</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3A)</div>
-                            <button onclick="checkStoreAvailability('Forest Essentials Soundarya Radiance Serum')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Forest Essentials Soundarya Radiance Serum')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -310,7 +299,7 @@
                         <div>
                             <div class="product-price">₹2,995</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3B)</div>
-                            <button onclick="checkStoreAvailability('Kama Ayurveda Kumkumadi Beauty Fluid')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Kama Ayurveda Kumkumadi Beauty Fluid')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -338,7 +327,7 @@
                         <div>
                             <div class="product-price">₹349</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3C)</div>
-                            <button onclick="checkStoreAvailability('Biotique Bio Dandelion Lightening Serum')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Biotique Bio Dandelion Lightening Serum')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -367,7 +356,7 @@
                         <div>
                             <div class="product-price">₹329</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 3A)</div>
-                            <button onclick="checkStoreAvailability('Plum Green Tea Pore Face Wash')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Plum Green Tea Pore Face Wash')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -395,7 +384,7 @@
                         <div>
                             <div class="product-price">₹999</div>
                             <div class="stock-status"><i class="fas fa-check-circle"></i> In Stock (Aisle 4A)</div>
-                            <button onclick="checkStoreAvailability('Lakmé Absolute Face & Powder Brush')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Boutique Live Stock</button>
+                            <button onclick="checkStoreAvailability('Lakmé Absolute Face & Powder Brush')" style="margin-top: 10px; width: 100%; border:1px solid var(--primary); color: var(--primary); padding:6px; font-size: 0.75rem; background:transparent; cursor:pointer;">Check Store Live Stock</button>
                         </div>
                     </div>
                 </div>
@@ -423,7 +412,7 @@
                     <h2 class="promo-title">TRIAL AND EXPLORE BEAUTY PHYSICALLY</h2>
                     <p>We believe online shopping cannot replace physical experience. Touch the textures, evaluate the true pigments in changing day light, and enjoy personalized routines mapped out by certified cosmetics advisers.</p>
                     <div>
-                        <a href="#about" class="btn-luxury-outline">Learn About Boutique</a>
+                        <a href="#about" class="btn-luxury-outline">Learn About Store</a>
                     </div>
                 </div>
             </div>
@@ -439,10 +428,10 @@
                     <img src="assets/images/about_consultation.png" alt="Skincare consultation counter">
                 </div>
                 <div>
-                    <span class="promo-subtitle">Sensory Beauty Boutique</span>
+                    <span class="promo-subtitle">Sensory Beauty Store</span>
                     <h2 class="company-title">Our Physical Showrooms</h2>
                     <p class="company-desc">
-                        Every cosmetic product at Concept Beauty is arranged for hands-on sensory trials. We host bespoke makeup counters, shade-matching diagnostic panels, and Ayurvedic consultants who will help you find the absolute perfect shade of Lakmé, Sugar, or Kama Ayurveda for your skin.
+                        Every cosmetic product at Glam & Glow is arranged for hands-on sensory trials. We host bespoke makeup counters, shade-matching diagnostic panels, and Ayurvedic consultants who will help you find the absolute perfect shade of Lakmé, Sugar, or Kama Ayurveda for your skin.
                     </p>
                     <p class="company-desc">
                         Our physical showrooms are spaces of calmness, safety, and certified guidance. We sanitize all samples before trials and supply fresh batches directly from brand houses.
@@ -548,12 +537,12 @@
     </section>
 
     <!-- CONTACT US SECTION -->
-    <section id="contact" class="section-padding" style="background-color: #FAF6F0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <section id="contact" class="section-padding" style="background-color: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-subtitle">Store Locator</span>
-                <h2 class="section-title">CONTACT OUR BOUTIQUE</h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">Book a visit to our flagship Baranagar boutique or get in touch for details.</p>
+                <h2 class="section-title">CONTACT OUR STORE</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">Book a visit to our flagship Baranagar store or get in touch for details.</p>
             </div>
 
             <!-- Simulated Map -->
@@ -568,7 +557,7 @@
                     <a href="https://maps.app.goo.gl/oFHSH9wUEdBh7J986" target="_blank" rel="noopener noreferrer" class="map-pin" title="View on Google Maps"></a>
                     
                     <div class="map-card-popup">
-                        <h4><i class="fas fa-store"></i> Concept Beauty Boutique</h4>
+                        <h4><i class="fas fa-store"></i> Glam & Glow Store</h4>
                         <p><a href="https://maps.app.goo.gl/oFHSH9wUEdBh7J986" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline; font-weight: 500;"><i class="fas fa-map-marker-alt"></i> BK Moitra Rd, Baranagar, West Bengal 700036</a></p>
                         <p style="font-size:0.75rem; color:#888;"><i class="far fa-clock"></i> Today: 10:00 AM - 9:00 PM</p>
                         <div style="margin-top: 10px;">
@@ -586,7 +575,7 @@
                         <li>
                             <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="contact-detail-text">
-                                <h4>Boutique Location</h4>
+                                <h4>Store Location</h4>
                                 <p><a href="https://maps.app.goo.gl/oFHSH9wUEdBh7J986" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">BK Moitra Rd, Baranagar,<br>West Bengal 700036</a></p>
                             </div>
                         </li>
@@ -601,7 +590,7 @@
                             <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
                             <div class="contact-detail-text">
                                 <h4>Official Emails</h4>
-                                <p>info@conceptbeautyindia.com<br>support@conceptbeautyindia.com</p>
+                                <p>info@glamandglow.com<br>support@glamandglow.com</p>
                             </div>
                         </li>
                     </ul>
@@ -647,7 +636,7 @@
     <!-- BOTTOM COSMETICS COLLAGE -->
     <section class="collage-grid">
         <div class="collage-item">
-            <img src="assets/images/hero_makeup.png" alt="Cosmetic grid">
+            <img src="assets/images/glam_glow_banner.jpg" alt="Cosmetic grid">
             <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="collage-item">
@@ -659,7 +648,7 @@
             <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="collage-item">
-            <img src="assets/images/team_specialist_1.png" alt="In-store boutique beauty">
+            <img src="assets/images/team_specialist_1.png" alt="In-store store beauty">
             <div class="collage-overlay"><i class="fab fa-instagram"></i></div>
         </div>
     </section>
@@ -669,7 +658,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>About Concept Beauty</h3>
+                    <h3>About Glam & Glow</h3>
                     <p>We are a premium offline cosmetic destination committed to the physical trial and discovery of beauty. Visit our showrooms for custom shade matching and dermatological consultations.</p>
                     <div class="footer-socials">
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -715,7 +704,7 @@
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <div>info@conceptbeautyindia.com<br>support@conceptbeautyindia.com</div>
+                            <div>info@glamandglow.com<br>support@glamandglow.com</div>
                         </li>
                     </ul>
                     <div class="footer-payments">
@@ -729,8 +718,8 @@
             </div>
             
             <div class="footer-bottom">
-                <div>&copy; 2026 Concept Beauty Cosmetics Store. All Rights Reserved.</div>
-                <div class="footer-bottom-logo">Concept<span>Beauty</span></div>
+                <div>&copy; 2026 Glam & Glow Cosmetics Store. All Rights Reserved.</div>
+                <div class="footer-bottom-logo">Glam<span> & Glow</span></div>
             </div>
         </div>
     </footer>
@@ -836,3 +825,14 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
