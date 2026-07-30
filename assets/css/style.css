@@ -2011,7 +2011,7 @@ footer {
 .brand-logo-card span {
     max-width: 100%;
     color: var(--secondary);
-    font-size: 0.68rem;
+    font-size: 0.95rem; text-align: center;
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1.2;
@@ -2191,6 +2191,7 @@ footer {
         right: -100%;
     }
 }
+
 
 
 
